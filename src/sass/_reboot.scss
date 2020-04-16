@@ -1,0 +1,35 @@
+* {
+  outline: none;
+  position: relative;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  &.full-page {
+    height: 100%;
+
+    > body {
+      height: 100%;
+    }
+  }
+}
+
+body {
+  background-color: lighten(color("gray"), 5%);
+  color: color("black");
+  font-family: $font-sans-serif;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+}
