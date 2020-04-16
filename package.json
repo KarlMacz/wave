@@ -1,0 +1,30 @@
+{
+  "name": "wave",
+  "version": "0.1.1",
+  "description": "Web Designing Toolkit",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dist": "gulp",
+    "dist-css": "gulp css",
+    "dist-js": "gulp js",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarlMacz/wave.git"
+  },
+  "author": "Karl T. Macadangdang <karljarren0308@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarlMacz/wave/issues"
+  },
+  "homepage": "https://github.com/KarlMacz/wave#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "del": "^5.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}

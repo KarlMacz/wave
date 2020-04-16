@@ -1,0 +1,6 @@
+# Excluded folder(s)
+dist
+node_modules
+
+# Excluded file(s)
+package-lock.json

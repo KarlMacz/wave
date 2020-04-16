@@ -1,0 +1,26 @@
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+) !default;
+
+$colors: (
+  "black": hsl(0, 0%, 13%), // #222222
+  "gray": hsl(0, 0%, 90%), // #dddddd
+  "white": hsl(0, 0%, 100%), // #ffffff
+) !default;
+
+$indexes: (
+  "navbar": 1000
+) !default;
+
+$transition-speed-base: 0.2s;
+
+$font-size-small: 8px !default;
+$font-size-base: 16px !default;
+$font-size-large: 24px !default;
+
+$font-sans-serif: "Roboto", sans-serif !default;
+$font-serif: "Roboto Slab", serif !default;
+$font-monospace: "Roboto Mono", monospace !default;
