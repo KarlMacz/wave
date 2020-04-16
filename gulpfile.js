@@ -37,8 +37,14 @@ function js() {
     .pipe(dest('dist/js'));
 };
 
+function font() {
+  return src('src/fonts/*')
+    .pipe(dest('dist/fonts'));
+};
+
 function watcher() {
   let cssWatcher = watch(['src/sass/*.scss'], css);
+  let fontWatcher = watch(['src/sass/*'], font);
   let jsWatcher = watch(['src/js/*.js'], js);
 
   cssWatcher.on('add', function(path, stats) {
@@ -64,9 +70,22 @@ function watcher() {
   jsWatcher.on('unlink', function(path, stats) {
     console.log(`File ${path} was removed.`);
   });
+
+  fontWatcher.on('add', function(path, stats) {
+    console.log(`File ${path} was added.`);
+  });
+
+  fontWatcher.on('change', function(path, stats) {
+    console.log(`File ${path} was changed.`);
+  });
+
+  fontWatcher.on('unlink', function(path, stats) {
+    console.log(`File ${path} was removed.`);
+  });
 }
 
 exports.css = series(clean, css);
 exports.js = series(clean, js);
+exports.font = series(clean, font);
 exports.watch = watcher;
-exports.default = series(clean, parallel(css, js));
+exports.default = series(clean, parallel(css, js, font));
