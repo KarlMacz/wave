@@ -29,6 +29,10 @@ body {
 
 p {
   margin: 1rem 0;
+
+  &.indent {
+    text-indent: 10%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -57,4 +61,11 @@ h5 {
 
 h6 {
   font-size: 0.5rem;
+}
+
+hr {
+  border-top: 2px solid darken(color("gray"), 5%);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
 }
