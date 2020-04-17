@@ -36,7 +36,7 @@
 }
 
 // For small devices
-@media screen and (min-width: breakpoint("sm") and max-width: breakpoint("md") - 1) {
+@media screen and (min-width: breakpoint("sm")) and (max-width: breakpoint("md") - 1) {
   .row {
     > .column {
       @for $i from 1 through 12 {
@@ -50,7 +50,7 @@
 }
 
 // For medium devices
-@media screen and (min-width: breakpoint("md") and max-width: breakpoint("lg") - 1) {
+@media screen and (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
   .row {
     > .column {
       @for $i from 1 through 12 {
@@ -64,7 +64,7 @@
 }
 
 // For large devices
-@media screen and (min-width: breakpoint("lg") and max-width: breakpoint("xl") - 1) {
+@media screen and (min-width: breakpoint("lg")) and (max-width: breakpoint("xl") - 1) {
   .row {
     > .column {
       @for $i from 1 through 12 {
