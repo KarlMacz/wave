@@ -1,0 +1,92 @@
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+
+  &.fluid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  > .column {
+    flex: 1;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+// For extra small devices
+@media screen and (max-width: breakpoint("sm") - 1) {
+  .row {
+    > .column {
+      @for $i from 1 through 12 {
+        &.span-xs-#{$i} {
+          min-width: 8.333333333333333% * $i;
+          max-width: 8.333333333333333% * $i;
+        }
+      }
+    }
+  }
+}
+
+// For small devices
+@media screen and (min-width: breakpoint("sm") and max-width: breakpoint("md") - 1) {
+  .row {
+    > .column {
+      @for $i from 1 through 12 {
+        &.span-sm-#{$i} {
+          min-width: 8.333333333333333% * $i;
+          max-width: 8.333333333333333% * $i;
+        }
+      }
+    }
+  }
+}
+
+// For medium devices
+@media screen and (min-width: breakpoint("md") and max-width: breakpoint("lg") - 1) {
+  .row {
+    > .column {
+      @for $i from 1 through 12 {
+        &.span-md-#{$i} {
+          min-width: 8.333333333333333% * $i;
+          max-width: 8.333333333333333% * $i;
+        }
+      }
+    }
+  }
+}
+
+// For large devices
+@media screen and (min-width: breakpoint("lg") and max-width: breakpoint("xl") - 1) {
+  .row {
+    > .column {
+      @for $i from 1 through 12 {
+        &.span-lg-#{$i} {
+          min-width: 8.333333333333333% * $i;
+          max-width: 8.333333333333333% * $i;
+        }
+      }
+    }
+  }
+}
+
+// For extra large devices
+@media screen and (min-width: breakpoint("xl")) {
+  .row {
+    > .column {
+      @for $i from 1 through 12 {
+        &.span-xl-#{$i} {
+          min-width: 8.333333333333333% * $i;
+          max-width: 8.333333333333333% * $i;
+        }
+      }
+    }
+  }
+}
