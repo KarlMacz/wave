@@ -9,6 +9,12 @@ ul.nav {
     display: inline-block;
     height: 100%;
 
+    &.active {
+      > a {
+        color: color("black");
+      }
+    }
+
     > a {
       align-items: center;
       color: lighten(color("black"), 50%);
