@@ -2,6 +2,7 @@
   background-color: color("white");
   display: flex;
   flex-direction: row;
+  z-index: indexing("navbar");
   margin-bottom: 1rem;
   height: $navbar-height;
 
