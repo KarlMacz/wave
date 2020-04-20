@@ -11,32 +11,28 @@
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 
   > .column {
+    display: inline-block;
     flex: 1;
+    word-wrap: break-word;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-  }
-}
 
-// For extra small devices
-@media screen and (max-width: breakpoint("sm") - 1) {
-  .row {
-    > .column {
-      @for $i from 1 through 12 {
-        &.span-xs-#{$i} {
-          min-width: 8.333333333333333% * $i;
-          max-width: 8.333333333333333% * $i;
-        }
+    @for $i from 1 through 12 {
+      &.span-#{$i} {
+        min-width: 8.333333333333333% * $i;
+        max-width: 8.333333333333333% * $i;
       }
     }
   }
 }
 
 // For small devices
-@media screen and (min-width: breakpoint("sm")) and (max-width: breakpoint("md") - 1) {
+@media screen and (min-width: breakpoint("sm")) {
   .row {
     > .column {
       @for $i from 1 through 12 {
@@ -50,7 +46,7 @@
 }
 
 // For medium devices
-@media screen and (min-width: breakpoint("md")) and (max-width: breakpoint("lg") - 1) {
+@media screen and (min-width: breakpoint("md")) {
   .row {
     > .column {
       @for $i from 1 through 12 {
@@ -64,7 +60,7 @@
 }
 
 // For large devices
-@media screen and (min-width: breakpoint("lg")) and (max-width: breakpoint("xl") - 1) {
+@media screen and (min-width: breakpoint("lg")) {
   .row {
     > .column {
       @for $i from 1 through 12 {
