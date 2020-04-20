@@ -5,6 +5,18 @@
   margin-bottom: 1rem;
   height: $navbar-height;
 
+  &.sticky-top {
+    position: sticky;
+    top: 0;
+  }
+
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   .navbar-head {
     display: inline-block;
     height: 100%;
