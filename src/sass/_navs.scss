@@ -5,6 +5,24 @@ ul.nav {
   margin: 0;
   height: $nav-height;
 
+  &.vertical {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+
+    > li {
+      height: auto;
+      width: 100%;
+
+      > a {
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
   > li {
     display: inline-block;
     height: 100%;
@@ -23,7 +41,6 @@ ul.nav {
       text-decoration: none;
       padding: 0 1rem;
       height: 100%;
-      transition: $transition-speed-base;
 
       &:hover {
         color: color("black");
