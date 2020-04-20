@@ -64,8 +64,7 @@ h6 {
 }
 
 hr {
-  border-top: 2px solid darken(color("gray"), 5%);
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
+  background-color: color("gray");
+  border: none;
+  height: 2px;
 }
