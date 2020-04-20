@@ -12,8 +12,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+
+  &.no-gutter {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+  }
 
   > .column {
     display: inline-block;
