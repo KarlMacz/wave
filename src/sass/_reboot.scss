@@ -36,6 +36,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
   margin: 1rem 0;
 }
 
@@ -67,4 +68,8 @@ hr {
   background-color: color("gray");
   border: none;
   height: 2px;
+}
+
+a {
+  color: color("blue");
 }
